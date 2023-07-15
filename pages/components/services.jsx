@@ -8,7 +8,7 @@ const isArray = (arr) => {
 const Services = () => {
   return (
     <div className="h-screen flex flex-col justify-evenly items-center">
-      <h1 className="uppercase text-3xl tracking-[0.3em]">
+      <h1 className="uppercase text-3xl tracking-[0.3em] text-center">
         Mes services
       </h1>
       <div className="flex flex-col gap-10 md:w-2/3 lg:w-1/2">

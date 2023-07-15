@@ -1,7 +1,7 @@
 import { experience } from "../../data/experience"
 import Image from "next/image"
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Experience = () => {
   const [index, setIndex] = useState(0)
@@ -14,10 +14,14 @@ const Experience = () => {
     setIndex(index < experience.length - 1 ? index + 1 : 0)
   }
 
+  useEffect(() => {
+    setTimeout(() => nextExp(), 10000)
+  }, [nextExp]);
+
   return (
     <div className="bg-gray-100 flex flex-col justify-evenly items-center h-screen">
-      <h1 className="uppercase text-3xl tracking-[0.3em]">
-        Mon parcours
+      <h1 className="uppercase text-3xl tracking-[0.3em] text-center">
+        {"Mon parcours"}
       </h1>
       <div className="relative">
         <Image
@@ -27,7 +31,7 @@ const Experience = () => {
           width={800}
           height={400}
         />
-        <div className="absolute text-2xl font-bold tracking-widest top-10 left-10 right-10 text-center">
+        <div className="absolute text-2xl font-bold tracking-widest top-5 left-10 right-10 text-center">
           {experience[index].title}
         </div>
         <ChevronLeftIcon
@@ -38,7 +42,7 @@ const Experience = () => {
           className="h-10 w-10 absolute right-10 top-1/2 -translate-y-1/2"
           onClick={() => nextExp()}
         />
-        <div className="absolute bottom-10 left-10 right-10 text-justify">
+        <div className="absolute bottom-5 left-10 right-10 text-justify">
           {experience[index].description}
         </div>
       </div>

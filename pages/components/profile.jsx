@@ -6,7 +6,7 @@ export const Profile = () => {
       <Image
         src="/nathalie.jpg"
         alt="Nathalie Dessirier"
-        className="w-96 h-96 rounded-full object-cover"
+        className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover"
         width={500}
         height={500}
       />
