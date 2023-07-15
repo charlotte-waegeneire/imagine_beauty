@@ -18,6 +18,7 @@ const Testimony = () => {
 
   useEffect(() => {
     setTimeout(() => handleNext(), 5000)
+    // todo: transition
   }, [handleNext]);
 
   return (

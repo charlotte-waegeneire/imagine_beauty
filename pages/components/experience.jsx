@@ -16,6 +16,7 @@ const Experience = () => {
 
   useEffect(() => {
     setTimeout(() => nextExp(), 10000)
+    // todo: transition
   }, [nextExp]);
 
   return (
